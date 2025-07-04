@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chic Threads: Shop Latest Fashion, Clothing & Accessories Online</title>
     <meta name="description" content="Discover Chic Threads for the latest fashion trends, stylish clothing, and unique accessories. Shop our curated collections for men and women and elevate your wardrobe today!">
+    <meta name="keywords" content="fashion, clothing, apparel, accessories, online store, shop, trends, style, men's fashion, women's fashion, dresses, shirts, pants, shoes, bags, jewelry, new arrivals, chic threads">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Light background for the whole page */
+            scroll-behavior: smooth; /* Smooth scrolling for internal links */
         }
         /* Custom scrollbar for a cleaner look */
         ::-webkit-scrollbar {
@@ -30,19 +32,19 @@
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body id="top" class="text-gray-800">
 
     <!-- Header Section -->
     <header class="bg-white shadow-md py-4 px-6 md:px-12 lg:px-24 flex justify-between items-center rounded-b-lg">
         <!-- Logo/Store Name -->
-        <a href="#" class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition duration-300">Chic Threads</a>
+        <a href="/" class="text-2xl font-bold text-indigo-700 hover:text-indigo-900 transition duration-300">Chic Threads</a>
 
         <!-- Navigation Menu -->
         <nav class="hidden md:flex space-x-8">
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Home</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Shop</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">New Arrivals</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Contact</a>
+            <a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Home</a>
+            <a href="#featured-collections" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Shop Collections</a>
+            <a href="/collections/new-arrivals.html" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">New Arrivals</a>
+            <a href="#contact-us" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300">Contact</a>
         </nav>
 
         <!-- Mobile Menu Button (Hamburger) -->
@@ -58,64 +60,64 @@
     <!-- Mobile Menu (Hidden by default) -->
     <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 rounded-b-lg">
         <nav class="flex flex-col items-center space-y-4">
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Home</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Shop</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">New Arrivals</a>
-            <a href="#" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Contact</a>
+            <a href="/" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Home</a>
+            <a href="#featured-collections" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Shop Collections</a>
+            <a href="/collections/new-arrivals.html" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">New Arrivals</a>
+            <a href="#contact-us" class="text-gray-600 hover:text-indigo-700 font-medium transition duration-300 w-full text-center py-2">Contact</a>
         </nav>
     </div>
 
     <!-- Hero Section -->
     <section class="relative bg-cover bg-center h-96 md:h-[500px] flex items-center justify-center text-white rounded-lg m-4 md:m-8"
-        style="background-image: url('https://placehold.co/1200x600/6A5ACD/FFFFFF?text=Fashion+Hero');">
+        style="background-image: url('data:image/png;base64,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');">
         <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
         <div class="relative text-center p-4">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Discover Your Signature Style</h1>
             <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                 Explore our curated collection of trendy and timeless fashion pieces.
             </p>
-            <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+            <a href="/shop.html" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
                 Shop Now
             </a>
         </div>
     </section>
 
     <!-- Featured Products Section -->
-    <section class="py-12 px-6 md:px-12 lg:px-24">
+    <section id="featured-collections" class="py-12 px-6 md:px-12 lg:px-24">
         <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Featured Collections</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Product Card 1 -->
+            <!-- Product Card 1: Summer Vibes -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="https://placehold.co/600x400/FFD700/000000?text=Summer+Vibes" alt="Summer Collection" class="w-full h-64 object-cover">
+                <img src="https://placehold.co/600x400/FFD700/000000?text=Summer+Dress" alt="Model wearing a light summer dress from the Summer Vibes collection" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-gray-900">Summer Vibes</h3>
                     <p class="text-gray-600 mb-4">Light fabrics and vibrant colors for the sunny days.</p>
-                    <a href="#" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    <a href="/collections/summer-vibes.html" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
                         View Collection
                     </a>
                 </div>
             </div>
 
-            <!-- Product Card 2 -->
+            <!-- Product Card 2: Elegant Evening -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="https://placehold.co/600x400/9370DB/FFFFFF?text=Elegant+Evening" alt="Evening Wear" class="w-full h-64 object-cover">
+                <img src="https://placehold.co/600x400/9370DB/FFFFFF?text=Evening+Gown" alt="Person in elegant evening wear, showcasing the Elegant Evening collection" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-gray-900">Elegant Evening</h3>
                     <p class="text-gray-600 mb-4">Sophisticated dresses and suits for special occasions.</p>
-                    <a href="#" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    <a href="/collections/elegant-evening.html" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
                         View Collection
                     </a>
                 </div>
             </div>
 
-            <!-- Product Card 3 -->
+            <!-- Product Card 3: Casual Comfort -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="https://placehold.co/600x400/87CEEB/000000?text=Casual+Comfort" alt="Casual Wear" class="w-full h-64 object-cover">
+                <img src="https://placehold.co/600x400/87CEEB/000000?text=Casual+Outfit" alt="Model in comfortable casual attire from the Casual Comfort collection" class="w-full h-64 object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold mb-2 text-gray-900">Casual Comfort</h3>
                     <p class="text-gray-600 mb-4">Everyday essentials that blend style with ease.</p>
-                    <a href="#" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    <a href="/collections/casual-comfort.html" class="block text-center bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
                         View Collection
                     </a>
                 </div>
@@ -124,7 +126,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="bg-indigo-100 py-12 px-6 md:px-12 lg:px-24 rounded-lg m-4 md:m-8">
+    <section id="our-story" class="bg-indigo-100 py-12 px-6 md:px-12 lg:px-24 rounded-lg m-4 md:m-8">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6 text-indigo-800">Our Story</h2>
             <p class="text-lg text-gray-700 leading-relaxed">
@@ -166,30 +168,38 @@
             <div>
                 <h3 class="text-xl font-bold mb-4 text-indigo-300">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shop All</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sale</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                    <li><a href="/shop.html" class="text-gray-400 hover:text-white transition duration-300">Shop All</a></li>
+                    <li><a href="/collections/sale.html" class="text-gray-400 hover:text-white transition duration-300">Sale</a></li>
+                    <li><a href="/privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service.html" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
                 </ul>
             </div>
 
             <!-- Contact Info -->
-            <div>
+            <div id="contact-us">
                 <h3 class="text-xl font-bold mb-4 text-indigo-300">Contact Us</h3>
                 <p class="text-gray-400">Email: info@chicthreads.com</p>
                 <p class="text-gray-400">Phone: +1 (555) 123-4567</p>
+                <p class="text-gray-400 mt-2">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Fashion+Store+Location" target="_blank" rel="noopener noreferrer" class="text-indigo-300 hover:text-white transition duration-300 flex items-center">
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" clip-rule="evenodd" />
+                        </svg>
+                        Find Us on Map
+                    </a>
+                </p>
                 <div class="flex space-x-4 mt-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://facebook.com/chicthreads" class="text-gray-400 hover:text-white transition duration-300" target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22H12c5.523 0 10-4.477 10-10z" clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://instagram.com/chicthreads" class="text-gray-400 hover:text-white transition duration-300" target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056 8.969.307 10.148 1.424 10.445 10.42.043.93.056 1.286.056 3.715 0 2.43-.013 2.784-.056 3.715-.307 8.969-1.424 10.148-10.42 10.445-.93.043-1.286.056-3.715.056-2.43 0-2.784-.013-3.715-.056-8.969-.307-10.148-1.424-10.445-10.42-.043-.93-.056-1.286-.056-3.715 0-2.43.013-2.784.056-3.715.307-8.969 1.424-10.148 10.42-10.445.93-.043 1.286-.056 3.715-.056zm0 2.163c-2.43 0-2.784.013-3.715.056-8.969.307-10.148 1.424-10.445 10.42-.043.93-.056 1.286-.056 3.715 0 2.43.013 2.784.056 3.715.307 8.969 1.424 10.148 10.42 10.445.93-.043 1.286-.056 3.715.056 2.43 0 2.784-.013 3.715-.056 8.969-.307 10.148-1.424 10.445-10.42.043-.93.056-1.286.056-3.715 0-2.43-.013-2.784-.056-3.715-.307-8.969-1.424-10.148-10.42-10.445-.93-.043-1.286-.056-3.715-.056zM8.537 7.022a3.68 3.68 0 100 7.36 3.68 3.68 0 000-7.36zm0 2.163a1.517 1.517 0 110 3.034 1.517 1.517 0 010-3.034zm-5.06-2.163a.877.877 0 100 1.754.877.877 0 000-1.754z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.715.056 8.969.307 10.148 1.424 10.445 10.42.043.93.056 1.286.056 3.715 0 2.43-.013 2.784-.056 3.715-.307 8.969-1.424 10.148-10.42 10.445-.93.043-1.286.056-3.715.056-2.43 0-2.784-.013-3.715-.056-8.969-.307-10.148-1.424-10.445-10.42-.043-.93-.056-1.286-.056-3.715 0-2.43.013-2.784.056-3.715.307-8.969 1.424-10.148 10.42-10.445.93-.043 1.286-.056 3.715-.056zm0 2.163c-2.43 0-2.784.013-3.715.056-8.969.307-10.148 1.424-10.445 10.42-.043.93-.056 1.286-.056 3.715 0 2.43.013 2.784.056 3.715.307 8.969 1.424 10.148 10.42 10.445.93-.043 1.286-.056 3.715.056 2.43 0 2.784-.013 3.715-.056 8.969-.307 10.148-1.424 10.445-10.42.043-.93.056-1.286-.056-3.715 0-2.43-.013-2.784-.056-3.715-.307-8.969-1.424-10.148-10.42-10.445-.93-.043-1.286-.056-3.715-.056zM8.537 7.022a3.68 3.68 0 100 7.36 3.68 3.68 0 000-7.36zm0 2.163a1.517 1.517 0 110 3.034 1.517 1.517 0 010-3.034zm-5.06-2.163a.877.877 0 100 1.754.877.877 0 000-1.754z" clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                    <a href="https://twitter.com/chicthreads" class="text-gray-400 hover:text-white transition duration-300" target="_blank" rel="noopener noreferrer">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.007-.532A8.318 8.318 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.22 8.22 0 01-2.606.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 10.792v.05c0 4.477 3.18 8.135 7.404 8.985A4.094 4.094 0 014.3 19.14a4.106 4.106 0 001.956-.544 4.145 4.145 0 01-3.376-2.835 4.106 4.106 0 001.3 3.93 8.176 8.176 0 002.434.66z" />
                         </svg>
@@ -199,6 +209,7 @@
         </div>
         <div class="text-center text-gray-500 mt-8">
             &copy; 2025 Chic Threads. All rights reserved.
+            <p class="mt-2"><a href="#top" class="text-gray-500 hover:text-white transition duration-300">Back to Top</a></p>
         </div>
     </footer>
 
